@@ -1,22 +1,22 @@
-set(PARALLEL_FORTRAN_MOD_DIR
+set(PARALLEL_UTILS_MOD_DIR
     ${CMAKE_CURRENT_BINARY_DIR}/modules)
 
-add_library(parallel_fortran STATIC
+add_library(parallel_utils STATIC
     src/kinds_types.f90
     src/error_utils.f90
     src/mpi_context.f90
 )
 
-set_target_properties(parallel_fortran PROPERTIES
-    Fortran_MODULE_DIRECTORY ${PARALLEL_FORTRAN_MOD_DIR}
+set_target_properties(parallel_utils PROPERTIES
+    Fortran_MODULE_DIRECTORY ${PARALLEL_UTILS_MOD_DIR}
 )
 
-target_include_directories(parallel_fortran
+target_include_directories(parallel_utils
     PUBLIC
-        ${PARALLEL_FORTRAN_MOD_DIR}
+        ${PARALLEL_UTILS_MOD_DIR}
 )
 
-target_link_libraries(parallel_fortran
+target_link_libraries(parallel_utils
     PUBLIC
         MPI::MPI_Fortran
 )
