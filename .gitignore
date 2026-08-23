@@ -1,0 +1,39 @@
+# executables and build directories
+bin/
+build/
+*.exe
+
+# temporary editor files
+*~
+*.swp
+
+# OS X files
+.DS_Store
+
+# macOS debug symbol bundles
+*.dSYM/
+
+# Compiled object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled headers
+*.gch
+*.pch
+
+# Compiled dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled static libraries
+*.lai
+*.la
+*.a
+*.lib
